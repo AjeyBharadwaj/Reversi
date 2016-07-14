@@ -1,4 +1,4 @@
-all: reversi generate_possiblity modify find_winner
+all: reversi generate_possiblity modify find_winner tester
 
 reversi: reversi.c
 	gcc reversi.c -o reversi
@@ -12,6 +12,9 @@ modify: modify.c
 find_winner: find_winner.c
 	gcc find_winner.c -o find_winner
 
+tester: tester.c
+	gcc tester.c -o tester
+
 .PHONY: clean
 clean: 
-	rm -rf reversi generate_possiblity modify find_winner possiblity.log move_done.log modify.log final.log
+	rm -rf reversi generate_possiblity modify find_winner tester possiblity.log move_done.log modify.log final.log
