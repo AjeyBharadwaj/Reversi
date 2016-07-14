@@ -119,7 +119,7 @@ int compute_score_LT_RB(int x, int y, int player_num) {
     tmp_score = 0;
     i = x-1;
     j = y+1;
-    while(i >= 0 && j >=0) {
+    while(i >= 0 && j < SIZE) {
         tmp_score++;
         if (G_board[i][j] == 0 || G_board[i][j] == 3) {
             break;
@@ -134,7 +134,7 @@ int compute_score_LT_RB(int x, int y, int player_num) {
     tmp_score = 0;
     i = x+1;
     j = y-1;
-    while(i < SIZE && j < SIZE) {
+    while(i < SIZE && j >= 0) {
         tmp_score++;
         if (G_board[i][j] == 0 || G_board[i][j] == 3) {
             break;

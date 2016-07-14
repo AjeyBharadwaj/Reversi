@@ -11,4 +11,4 @@ modify: modify.c
 
 .PHONY: clean
 clean: 
-	rm -rf reversi generate_possiblity modify
+	rm -rf reversi generate_possiblity modify possiblity.log move_done.log modify.log final.log

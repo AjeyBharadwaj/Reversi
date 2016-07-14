@@ -89,16 +89,15 @@ void populate_possiblity(int x, int y) {
     j = y-1;
     found = 0;
     while(i >= 0 && j >=0) {
-        if (G_board[x][y] != G_other_player) {
-            if (found == 1 && G_board[x][y] == 0) {
-                G_board[x][y] = 3;
+        if (G_board[i][j] != G_other_player) {
+            if (found == 1 && G_board[i][j] == 0) {
+                G_board[i][j] = 3;
             }
             break;
-        } else if (G_board[x][y] == G_other_player){
+        } else if (G_board[i][j] == G_other_player){
             found = 1;
-            continue;
         } else {
-            G_board[x][y] = 3;
+            G_board[i][j] = 3;
         }
         i--;
         j--;
@@ -108,16 +107,15 @@ void populate_possiblity(int x, int y) {
     j = y+1;
     found = 0;
     while(i < SIZE && j < SIZE) {
-        if (G_board[x][y] != G_other_player) {
-            if (found == 1 && G_board[x][y] == 0) {
-                G_board[x][y] = 3;
+        if (G_board[i][j] != G_other_player) {
+            if (found == 1 && G_board[i][j] == 0) {
+                G_board[i][j] = 3;
             }
             break;
-        } else if (G_board[x][y] == G_other_player){
+        } else if (G_board[i][j] == G_other_player){
             found = 1;
-            continue;
         } else {
-            G_board[x][y] = 3;
+            G_board[i][j] = 3;
         }
         i++;
         j++;
@@ -126,17 +124,16 @@ void populate_possiblity(int x, int y) {
     i = x-1;
     j = y+1;
     found = 0;
-    while(i >= 0 && j >=0) {
-        if (G_board[x][y] != G_other_player) {
-            if (found == 1 && G_board[x][y] == 0) {
-                G_board[x][y] = 3;
+    while(i >= 0 && j < SIZE) {
+        if (G_board[i][j] != G_other_player) {
+            if (found == 1 && G_board[i][j] == 0) {
+                G_board[i][j] = 3;
             }
             break;
-        } else if (G_board[x][y] == G_other_player){
+        } else if (G_board[i][j] == G_other_player){
             found = 1;
-            continue;
         } else {
-            G_board[x][y] = 3;
+            G_board[i][j] = 3;
         }
         i--;
         j++;
@@ -145,17 +142,16 @@ void populate_possiblity(int x, int y) {
     i = x+1;
     j = y-1;
     found = 0;
-    while(i < SIZE && j < SIZE) {
-        if (G_board[x][y] != G_other_player) {
-            if (found == 1 && G_board[x][y] == 0) {
-                G_board[x][y] = 3;
+    while(i < SIZE && j >= 0) {
+        if (G_board[i][j] != G_other_player) {
+            if (found == 1 && G_board[i][j] == 0) {
+                G_board[i][j] = 3;
             }
             break;
-        } else if (G_board[x][y] == G_other_player){
+        } else if (G_board[i][j] == G_other_player){
             found = 1;
-            continue;
         } else {
-            G_board[x][y] = 3;
+            G_board[i][j] = 3;
         }
         i++;
         j--;
